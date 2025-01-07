@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="myScript.js"></script>
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <script>
+        let text = "Please locate where 'locate' occurs!";
+        let index1 = text.indexOf("locate");
+        let index3 = text.indexOf("John");
+        let index2 = text.lastIndexOf("locate");
+        let index4 = text.indexOf("locate", 15);
+        let index5 = text.lastIndexOf("locate", 15);
+        let index6 = text.search("locate");//let index = text.search(/locate/);
+        document.getElementById("demo1").innerHTML = index1;
+        document.getElementById("demo2").innerHTML = index2;
+        document.getElementById("demo3").innerHTML = index3;
+        document.getElementById("demo4").innerHTML = index4;
+        document.getElementById("demo5").innerHTML = index5;
+        document.getElementById("demo6").innerHTML = index6;
+
+
+        let text2 = "The rain in SPAIN stays mainly in the plain";
+        const myArr1 = text2.match("ain");//const myArr = text.match(/ain/);
+        const myArr2 = text2.match(/ain/gi);
+        document.getElementById("demo7").innerHTML = myArr1.length + " " + myArr;
+        document.getElementById("demo8").innerHTML = myArr2.length + " " + myArr;
+
+
+        let text3 = "I love cats. Cats are very easy to love. Cats are very popular."
+        const iterator1 = text3.matchAll("Cats");
+        const iterator2 = text3.matchAll(/Cats/g);
+        const iterator3 = text3.matchAll(/Cats/gi);
+        document.getElementById("demo9").innerHTML = Array.from(iterator1);
+        document.getElementById("demo10").innerHTML = Array.from(iterator2);
+        document.getElementById("demo11").innerHTML = Array.from(iterator3);
+
+
+        let text4 = "Hello world, welcome to the universe.";
+        document.getElementById("demo12").innerHTML = text4.includes("world");
+        document.getElementById("demo13").innerHTML = text4.includes("world", 12);
+
+
+        let text5 = "Hello world, welcome to the universe.";
+        document.getElementById("demo14").innerHTML = text5.startsWith("Hello");
+        document.getElementById("demo15").innerHTML = text5.startsWith("world");
+        document.getElementById("demo16").innerHTML = text5.startsWith("world", 5);
+        document.getElementById("demo17").innerHTML = text5.startsWith("world", 6);
+
+
+        let text6 = "John Doe";
+        document.getElementById("demo18").innerHTML = text6.endsWith("Doe");
+        document.getElementById("demo19").innerHTML = text6.endsWith("world", 11);
+    </script>
+</body>
+
+</html>

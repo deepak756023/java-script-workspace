@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="myScript.js"></script>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo3"></p>
+</body>
+<script>
+    const myDetails = {
+        firstName: "Deepak",
+        lastName: "Nayak",
+        age: 23,
+        //Method
+        //A method is a function definition stored as a property value.
+        fullName: function () {
+            return (this.firstName + " " + this.lastName).toUpperCase();
+            //uses the JavaScript toUpperCase() method to convert a text to uppercase
+        }
+    };
+    //Adding a method to an object
+    myDetails.details = function () {
+        return this.firstName + " " + this.lastName + " " + this.age
+    }
+
+
+    document.getElementById("demo").innerHTML = myDetails.fullName();//Accessing Object method
+    document.getElementById("demo1").innerHTML = myDetails.fullName;//Accessing Object method without ()
+    //OUTPUT  =  function() { return this.firstName + " " + this.lastName; }
+    document.getElementById("demo3").innerHTML = myDetails.details();
+
+</script>
+
+</html>

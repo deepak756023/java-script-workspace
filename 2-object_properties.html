@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objectProperties</title>
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        const person = {
+            name: "Deepak Nayak",
+            age: 23,
+            height: "6foot",
+            color: "brown",
+        }
+        person.weight = "85kg"; // Adding a property
+        delete person.color; //Deleting a property
+        //or delete person["color"];
+        //The delete keyword deletes both the value of the property and the property itself.
+        //After deletion, the property cannot be used before it is added back again.
+        // person.color = "black";
+
+        //Accessing JavaScript Properties
+        // objectName.property
+        document.getElementById("demo1").innerHTML = "My name is " + person.name + ".";
+        //objectName["property"]
+        document.getElementById("demo2").innerHTML = "I am " + person["age"] + " years old.";
+        //objectName[expression]
+        let x = "height";
+        document.getElementById("demo3").innerHTML = "My height is " + person[x] + ".";
+
+        document.getElementById("demo4").innerHTML = person.weight;
+        document.getElementById("demo5").innerHTML = person.color;
+
+        //Nested objects
+const myfather = {
+    name: "Dhananjay Nayak",
+    age: 58,
+    job: "Foreman",
+    car:{
+        company: "BMW",
+        type: "Racing",
+        color:"Red",
+    }
+}
+document.getElementById("demo6").innerHTML = myfather.car.company;
+    </script>
+</body>
+
+</html>

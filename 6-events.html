@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="myScript.js"></script>
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <!-- An HTML event can be something the browser does, or something a user does
+     syntax = <element event='some JavaScript'>
+    Example = <button onclick="this.innerHTML = Date()">The time is?</button> -->
+    <button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">The time is</button> <br>
+    <button type="button" onmouseover="document.getElementById('demo2').innerHTML = Date()">The time is</button> <br>
+    <button type="button" onkeydown="document.getElementById('demo3').innerHTML = Date()">The time is</button>
+
+</body>
+
+</html>
+
+<!-- onchange 	    An HTML element has been changed
+     onclick	    The user clicks an HTML element
+     onmouseover	The user moves the mouse over an HTML element
+     onmouseout	    The user moves the mouse away from an HTML element
+     onkeydown	    The user pushes a keyboard key
+     onload      	The browser has finished loading the page -->
+
+<!-- Event handlers can be used to handle and verify user input, user actions, and browser actions:
+
+     1.Things that should be done every time a page loads
+     2.Things that should be done when the page is closed
+     3.Action that should be performed when a user clicks a button
+     4.Content that should be verified when a user inputs data
+       And more ... -->
+
+<!-- Many different methods can be used to let JavaScript work with events:
+
+     1.HTML event attributes can execute JavaScript code directly
+     2.HTML event attributes can call JavaScript functions
+     3.You can assign your own event handler functions to HTML elements
+     4.You can prevent events from being sent or being handled
+       And more ... -->

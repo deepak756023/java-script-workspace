@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        // Create an Object:
+        //most commonly used
+        const car = { type: "Fiat", model: "500", color: "white" };
+        const bike = {
+            type: "sports",
+            name: "BMW",
+            ownerfirstName: "Deepak",
+            ownerlastName: "Nayak",
+            color: "White",
+            // Method(Methods are function definitions stored as property values.)
+            ownerfullName: function () {
+                 return this.ownerfirstName + " " + this.ownerlastName;
+                 }
+            // In the example above, this refers to the BIKE object
+        };
+        //creates an empty JavaScript object, and then adds 4 properties
+        const cycle = {};
+        cycle.type = "racing";
+        cycle.owner = "Akash";
+        cycle.color = "black";
+
+        //create a new JavaScript object using new Object(), and then adds 4 properties
+        const train = new Object();
+        train.type = "superfast";
+        train.color = "blue";
+        train.station = "Balasore";
+
+        // Display Data from the Object:
+        document.getElementById("demo1").innerHTML = "The car type is " + car.type;
+        document.getElementById("demo2").innerHTML = "The owner of the bike is " + bike.ownerfullName();
+        document.getElementById("demo3").innerHTML = "The color of the cycle is " + cycle["color"];
+        document.getElementById("demo4").innerHTML = "The train reached at " + train.station;
+
+        //JavaScript Objects are Mutable/Changable, They are addressed by reference, not by value. Any Change to x will also change person.
+        // Create an Object
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+         // Change Age
+         person.age = 10;
+        document.getElementById("demo5").innerHTML = " Deepak is " + person.age +" year old"; 
+
+        // Create a Copy
+        const x = person;
+
+       
+   </script>
+</body>
+
+</html>
+
+<!-- 
+In JavaScript, almost "everything" is an object.
+
+   Objects are objects
+   Maths are objects
+   Functions are objects
+   Dates are objects
+   Arrays are objects
+   Maps are objects
+   Sets are objects
+All JavaScript values, except primitives, are objects.
+
+A primitive value is a value that has no properties or methods.
+JavaScript defines 7 types of primitive data types:
+
+   1.string
+   2.number
+   3.boolean
+   4.null
+   5.undefined
+   6.symbol
+   7.bigint 
+           "Hello" is always "Hello".
+           if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.
+           Here 3.14 is Primitive
+           (true/false/null/undefined) is always (true/false/null/undefined)
+-->
