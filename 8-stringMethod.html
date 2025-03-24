@@ -9,70 +9,33 @@
 </head>
 
 <body>
-    <p id="demo1"></p>
-    <p id="demo2"></p>
-    <p id="demo3"></p>
-    <p id="demo4"></p>
-    <p id="demo5"></p>
-    <p id="demoa"></p>
-    <p id="demob"></p>
-    <p id="demo6"></p>
-    <p id="demo7"></p>
-    <p id="demo8"></p>
-    <p id="demo9"></p>
-    <p id="demo10"></p>
-    <p id="demo11"></p>
-    <p id="demo12"></p>
-    <p id="demo13"></p>
-    <p id="demo14"></p>
-    <p id="demo15"></p>
-    <p id="demo16"></p>
-    <p id="demo17"></p>
-    <p id="demo18"></p>
-    <p id="demo19"></p>
-    <p id="demo20"></p>
-    <p id="demo21"></p>
-    <p id="demo22"></p>
-    <p id="demo23"></p>
-    <p id="demo24"></p>
-    <p id="demo25"></p>
-    <p id="demo26"></p>
-    <p id="demo27"></p>
-    <p id="demo28"></p>
-    <p id="demo29"></p>
-    <p id="demo30"></p>
-    <p id="demo31"></p>
-    <p id="demo32"></p>
-    <p id="demo33"></p>
-    <p id="demo34"></p>
 <script>
 let text = "Deepak Nayak";
-document.getElementById("demo1").innerHTML = text.length;
-document.getElementById("demo2").innerHTML = text.charAt(1);
-document.getElementById("demo3").innerHTML = text.charCodeAt(1) ;
-document.getElementById("demo4").innerHTML = text.at(0);
-document.getElementById("demo5").innerHTML = text[3];
+text.length;
+text.charAt(1);//returns the character at a specified index
+text.charCodeAt(1) ;//returns the unicode of the character
+text.at(0);// It allows the use of negative indexes while charAt() do not.
+//Now you can use text.at(-2) instead of text(myString.length-2).
+text.at(-3);
+text.charAt(text.length-3);
 
-document.getElementById("demoa").innerHTML = text.at(-3);
-document.getElementById("demob").innerHTML = text.charAt(text.length-3);
 
 let txt = "Apple, Banana, Orange";
-document.getElementById("demo6").innerHTML = txt.slice(7,13);
-document.getElementById("demo7").innerHTML = txt.slice(7);
-document.getElementById("demo8").innerHTML = txt.slice(-6);
-document.getElementById("demo9").innerHTML = txt.slice(-14,-8);
+txt.slice(7,13);//[7,13)
+txt.slice(7);//[7
+txt.slice(-6);//If a parameter is negative, the position is counted from the end of the string
+txt.slice(-14,-8);//slices out a portion of a string from position -12 to position -6
 
-document.getElementById("demo10").innerHTML = txt.substring(15,23);
-document.getElementById("demo11").innerHTML = txt.substring(-6);
+//substring() is similar to slice().The difference is that start and end values less than 0 are treated as 0 in substring().
+txt.substring(15,23);//[15,23)
+txt.substring(-6);//[0
 
-document.getElementById("demo12").innerHTML = txt.substr(15,6);//Orange
-document.getElementById("demo13").innerHTML = txt.substr(7);//Banana, Orange
-document.getElementById("demo14").innerHTML = txt.substr(-4);//ange
+
 
 let text1 = "Akash Chandra Nayak";
-document.getElementById("demo15").innerHTML = text1.toUpperCase();
-document.getElementById("demo16").innerHTML = text1.toLowerCase();
-document.getElementById("demo26").innerHTML = text1.repeat(3);
+text1.toUpperCase();
+text1.toLowerCase();
+text1.repeat(3);//Akash Chandra NayakAkash Chandra NayakAkash Chandra Nayak
 
 let firstname = "Saroj";
 let midname = "Kumar";
@@ -82,30 +45,30 @@ document.getElementById("demo17").innerHTML = fullName;
 
 let text2 = "      Hello World!               ";
 let text3 = text2.trim();
-document.getElementById("demo18").innerHTML = text2 + "  " + text2.length;
-document.getElementById("demo19").innerHTML = text3 + "  " + text3.length;
 let text4 = text2.trimStart();
 let text5 = text2.trimEnd();
-document.getElementById("demo20").innerHTML = text4.length;
-document.getElementById("demo21").innerHTML = text5.length;
+
 
 let text6 = "5";
-document.getElementById("demo22").innerHTML = text6.padStart(4,"0");
-document.getElementById("demo23").innerHTML = text6.padStart(4,"x");
-document.getElementById("demo24").innerHTML = text6.padEnd(4,"x");
+text6.padStart(4,"0");//0005
+text6.padStart(4,"x");//xxx5
+text6.padEnd(4,"x");//5xxx
 let x = 5;
 let text8 = x.toString();
-document.getElementById("demo25").innerHTML = text8.padEnd(4,"x");
+document.getElementById("demo25").innerHTML = text8.padEnd(4,"x");//5xxx
 
 
 let text10 = 'The name of the cat is Rishi "lovely cat "';
-document.getElementById("demo27").innerHTML = text10.replace("cat","dog");
-document.getElementById("demo28").innerHTML = text10.replace("caT","dog");
-document.getElementById("demo29").innerHTML = text10.replace(/cAT/i,"dog");
-document.getElementById("demo30").innerHTML = text10.replace(/cat/g,"dog");
-document.getElementById("demo31").innerHTML = text10.replaceAll("cat","dog");
+text10.replace("cat","dog");//replaces only the first match and it is case sensitive
+text10.replace("caT","dog");// not replace anything
+text10.replace(/cAT/i,"dog");//To replace case insensitive, use a regular expression with an /i
+text10.replace(/cat/g,"dog");//replace all matches//replace(pattern, replacement)
+text10.replaceAll("cat","dog");//replaceAll(String regex, String replacement)
+//The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
 
-//Converting a String to an Array
+
+
+//Converting a String to an Array with the split() method
 let text11 = "a,b,c,d,e,f";
 const myArray = text11.split(",");
 document.getElementById("demo32").innerHTML = myArray[0];
