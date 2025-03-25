@@ -43,12 +43,13 @@ document.getElementById('demo3').innerHTML = text;
 
 //Associative Arrays
 // JavaScript does not support arrays with named indexes.
-// In JavaScript, arrays always use numbered indexes. 
-
+// In JavaScript, arrays always use numbered indexes.
+//Yes, in JavaScript, you can store both strings and integers in the same array because JavaScript arrays can hold mixed data types.
+//string, number, subarray, object etc
 const person3 = [];
-person3[0] = "John";
-person3[1] = "Doe";
-person3[2] = 46;
+person3[0] = "John";//string
+person3[1] = "Doe";//string
+person3[2] = 46;//number
 document.getElementById("demo4").innerHTML = person3[0] + " " + person3.length;//John 3
 const person4 = [];
 person4["firstName"] = "John";
