@@ -4,7 +4,7 @@ fruits.sort();//sorts an array alphabetically
 fruits.reverse();
 //By combining sort() and reverse(), you can sort an array in descending order
 
-//The difference between [toSorted(), toReversed()] and sort() is that the first method creates a new array,
+//The difference between [toSorted(), toReversed()] and sort() is that the first two methods creates a new array,
 // keeping the original array unchanged, while the last method alters the original array
 const months = ["Jan", "Feb", "Mar", "Apr"];
 const sorted = months.toSorted();
